@@ -24,16 +24,8 @@
     "vinibispo/ruby-lsp.nvim", requires = { "neovim/nvim-lspconfig" }, config = function()
         local ruby_lsp = require("ruby-lsp")
 
-        -- on LspAttach or on_attach setup this
+        -- on setup of lspconfig
         ruby_lsp.setup()
-        -- Example:
-        local lspconfig = require("lspconfig")
-        lspconfig.ruby_lsp.setup({
-            on_attach = function(client, bufnr)
-                -- other on_attach code
-                ruby_lsp.setup()
-            end
-        })
     end
 }
 ```
